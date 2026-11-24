@@ -4,6 +4,7 @@ import ballerinax/mongodb;
 
 configurable string host = "localhost";
 configurable int port = 27017;
+configurable string[] allowedOrigins = ["http://localhost:5173"];
 
 final mongodb:Client mongoDb = check new ({
     connection: {
@@ -16,7 +17,7 @@ final mongodb:Client mongoDb = check new ({
 
 @http:ServiceConfig {
     cors: {
-        allowOrigins: ["*"],
+        allowOrigins,
         allowMethods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
     }
 }
