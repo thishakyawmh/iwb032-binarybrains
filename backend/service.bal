@@ -17,7 +17,7 @@ final mongodb:Client mongoDb = check new ({
 
 @http:ServiceConfig {
     cors: {
-        allowOrigins,
+        allowOrigins: allowedOrigins,
         allowMethods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
     }
 }
