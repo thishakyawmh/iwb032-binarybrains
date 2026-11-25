@@ -1,0 +1,4 @@
+# Copy this file to Config.toml in the backend directory.
+host = "localhost"
+port = 27017
+allowedOrigins = ["http://localhost:5173"]
